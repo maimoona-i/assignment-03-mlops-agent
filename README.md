@@ -114,3 +114,4 @@ scripts/reproduce_dataset.sh v1           # reproducible dataset checkout
 * State-changing tools (`k8s_restart_deployment`, `k8s_scale_deployment`, `airflow_trigger_dag`) run only with explicit user confirmation — set by the *request*, never by the LLM.
 * Retraining is never started automatically; it is recommended only with explicit evidence.
 * Structured JSON logs (tool, status, duration, request id) with secret redaction. No secrets in the repo.
+
