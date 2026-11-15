@@ -1,0 +1,17 @@
+# The raw dataset itself is tracked with `dvc add data/dataset.csv` (-> data/dataset.csv.dvc).
+# This file defines the reproducible training pipeline built on top of it.
+stages:
+  train:
+    cmd: python training/train.py --no-register
+    deps:
+      - data/dataset.csv
+      - training/pipeline.py
+      - training/train.py
+    params:
+      - train
+      - quality_gate
+    outs:
+      - artifacts/model.joblib
+    metrics:
+      - metrics.json:
+          cache: false

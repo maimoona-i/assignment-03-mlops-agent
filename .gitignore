@@ -1,0 +1,18 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+*.egg-info/
+# DVC-managed data and generated artifacts (tracked by DVC, never by Git)
+/data/dataset.csv
+/data/dataset.csv.bak
+/models/*
+!/models/.gitkeep
+/artifacts/
+/metrics.json
+mlflow-data/
+airflow-logs/
+dvc-remote/

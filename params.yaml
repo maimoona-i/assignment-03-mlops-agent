@@ -1,0 +1,16 @@
+dataset_version: v1
+data:
+  path: data/dataset.csv
+  min_rows: 500
+  min_class_ratio: 0.05
+train:
+  model: random_forest
+  n_estimators: 100
+  max_depth: 8
+  test_size: 0.2
+  seed: 42
+quality_gate:
+  min_f1: 0.85
+mlflow:
+  experiment: mlops-agent-demo
+  registered_model: churn-classifier
